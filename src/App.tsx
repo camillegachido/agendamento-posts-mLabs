@@ -1,10 +1,12 @@
 import React from 'react'
-import './App.css'
+import { Header } from './components'
+import { GlobalStyle } from './styles'
 
 function App() {
    return (
       <div>
-         <h1>oi</h1>
+         <GlobalStyle />
+         <Header></Header>
       </div>
    )
 }
