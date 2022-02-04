@@ -19,8 +19,4 @@ export const Center = styled.section`
       box-shadow: none;
       padding: 12px 32px;
    }
-
-   button: hover {
-      cursor: pointer;
-   }
 `

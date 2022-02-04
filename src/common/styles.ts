@@ -6,4 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background: #E5E5E5;
-  }`
+  }
+  
+  .link{
+    text-decoration: none;
+  }
+
+  .hover:hover{ cursor: pointer }
+  `
