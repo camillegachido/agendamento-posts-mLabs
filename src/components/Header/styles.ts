@@ -27,5 +27,6 @@ export const User = styled.div`
 
    p {
       font-size: 14px;
+      font-weight: 500;
    }
 `

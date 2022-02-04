@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
-import Logo from '../../common/logo.png'
-import User from '../../common/user.png'
+import Logo from './assets/logo.png'
+import User from './assets/user.png'
 
 export function Header(): JSX.Element {
    return (
