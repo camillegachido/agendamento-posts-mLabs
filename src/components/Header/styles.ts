@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-   width: calc(100% - 80px);
+   width: 100%;
    position: fixed;
    top: 0;
    right: 0;
    background-color: #ffffff;
 
-   display: flex;
-   justify-content: space-between;
-   padding: 16px 40px;
+   div {
+      display: flex;
+      justify-content: space-between;
+   }
 `
 
 export const Logo = styled.img`

@@ -63,3 +63,9 @@ export const Button = styled.button<PropsButton>`
       cursor: pointer;
    }
 `
+
+export const Content = styled.div`
+   width: 1280px;
+   padding: 16px 40px;
+   margin: auto;
+`

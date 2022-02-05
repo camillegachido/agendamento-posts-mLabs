@@ -1,21 +1,23 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-   width: calc(100% - 80px);
+   width: 100%;
    position: fixed;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 
-   display: grid;
-   grid-template:
-      'social date visu' auto
-      'text text visu' auto
-      'upload upload visu' auto;
+   .content {
+      display: grid;
+      grid-template:
+         'social date visu' auto
+         'text text visu' auto
+         'upload upload visu' auto;
 
-   grid-template-columns: 1fr 1fr 2fr;
-   grid-column-gap: 40px;
-   grid-row-gap: 40px;
+      grid-template-columns: 1fr 1fr 2fr;
+      grid-column-gap: 40px;
+      grid-row-gap: 20px;
+   }
 `
 
 interface PropsModal {

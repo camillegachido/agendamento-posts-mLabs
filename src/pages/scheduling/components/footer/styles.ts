@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
 export const Footer = styled.footer`
-   width: calc(100% - 80px);
+   width: 100%;
    position: fixed;
    bottom: 0;
    right: 0;
    background-color: #ffffff;
 
-   display: flex;
-   justify-content: flex-end;
-   padding: 16px 40px;
+   .content {
+      display: flex;
+      justify-content: flex-end;
+   }
 
-   div {
+   .content div {
       display: flex;
       justify-content: space-between;
       width: 490px;

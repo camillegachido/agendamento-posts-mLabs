@@ -37,7 +37,7 @@ export function Text(): JSX.Element {
                aria-label="Teclado de emoji"
                onClick={() => setShowEmoji(!showEmoji)}
             />
-            <S.PickerContainer hidden={showEmoji}>
+            <S.PickerContainer hidden={!showEmoji}>
                <Picker
                   onEmojiClick={onEmojiClick}
                   disableAutoFocus

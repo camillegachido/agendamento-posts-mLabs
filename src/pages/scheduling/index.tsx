@@ -1,14 +1,18 @@
 import React from 'react'
-import { Footer, Medias, Date, Text } from './components'
+import { Footer, Medias, Date, Text, Upload } from './components'
 import * as S from './styles'
+import * as G from '../../common/styles'
 
 export function Scheduling(): JSX.Element {
    return (
       <>
          <S.Container>
-            <Medias />
-            <Date />
-            <Text />
+            <G.Content className="content">
+               <Medias />
+               <Date />
+               <Text />
+               <Upload />
+            </G.Content>
          </S.Container>
          <Footer />
       </>
