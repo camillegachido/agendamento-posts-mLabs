@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import DatePicker from 'react-modern-calendar-datepicker'
+import React, { RefObject, useState } from 'react'
+import DatePicker, { DayValue } from 'react-modern-calendar-datepicker'
 
 import Calendar from './assets/calendar-alt.png'
 import Clock from './assets/clock.svg'
@@ -8,13 +8,13 @@ import * as G from '../../styles'
 import 'react-modern-calendar-datepicker/lib/DatePicker.css'
 
 function InitialDate() {
-   const [selectedDay, setSelectedDay] = useState<any>(null)
+   const [selectedDay, setSelectedDay] = useState<DayValue>(null)
    const renderCustomInput = ({ ref }: any) => (
       <input
          readOnly
-         ref={ref} // necessary
+         ref={ref}
          placeholder="DD/MM"
-         value={selectedDay ? selectedDay.day : ''}
+         value={selectedDay ? `${selectedDay.day}/${selectedDay.month}` : ''}
          style={{ backgroundImage: `url(${Calendar})` }}
          className="input-class" // a styling class
       />

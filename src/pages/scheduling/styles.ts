@@ -9,13 +9,13 @@ export const Container = styled.section`
 
    display: grid;
    grid-template:
-      'social date visu'
-      'text text visu'
-      'upload upload visu';
+      'social date visu' auto
+      'text text visu' auto
+      'upload upload visu' auto;
 
-   grid-template-rows: 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 2fr;
    grid-column-gap: 40px;
+   grid-row-gap: 40px;
 `
 
 interface PropsModal {

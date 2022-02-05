@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Medias, Date } from './components'
+import { Footer, Medias, Date, Text } from './components'
 import * as S from './styles'
 
 export function Scheduling(): JSX.Element {
@@ -8,6 +8,7 @@ export function Scheduling(): JSX.Element {
          <S.Container>
             <Medias />
             <Date />
+            <Text />
          </S.Container>
          <Footer />
       </>
