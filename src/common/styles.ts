@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  .container-button{
+     display: flex;
+     justify-content: space-between;
+  }
   `
 
 interface PropsButton {

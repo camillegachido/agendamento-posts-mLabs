@@ -1,8 +1,16 @@
 import React from 'react'
-import Footer from './components/footer'
+import { Footer, Medias } from './components'
+import * as S from './styles'
 
 export function Scheduling(): JSX.Element {
-   return <Footer />
+   return (
+      <>
+         <S.Container>
+            <Medias />
+         </S.Container>
+         <Footer />
+      </>
+   )
 }
 
 export default Scheduling

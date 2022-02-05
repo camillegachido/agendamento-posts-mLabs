@@ -7,12 +7,11 @@ import Routes from './routes'
 function App() {
    return (
       <>
+         <GlobalStyle />
          <BrowserRouter>
             <Header />
             <Routes />
          </BrowserRouter>
-
-         <GlobalStyle />
       </>
    )
 }

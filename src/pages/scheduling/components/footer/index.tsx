@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from './styles'
 import * as G from '../../../../common/styles'
 
-export function Header(): JSX.Element {
+export function Footer(): JSX.Element {
    return (
       <S.Footer>
          <div>
@@ -33,4 +33,4 @@ export function Header(): JSX.Element {
    )
 }
 
-export default Header
+export default Footer
