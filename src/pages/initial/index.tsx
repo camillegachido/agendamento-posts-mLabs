@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import * as S from './styles'
+import * as G from '../../common/styles'
 import Posts from './assets/posts.png'
 
 export function Initial(): JSX.Element {
@@ -9,9 +10,13 @@ export function Initial(): JSX.Element {
       <S.Center>
          <img src={Posts} alt="Logo mLabs" />
          <Link to="agendamento" className="link">
-            <button type="button" className="hover">
+            <G.Button
+               backgroundColor="#f2994a"
+               color="#fff"
+               borderColor="#e0812c"
+            >
                Agendar post
-            </button>
+            </G.Button>
          </Link>
       </S.Center>
    )

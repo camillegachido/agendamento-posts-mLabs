@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
    body {
@@ -12,5 +12,30 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  .hover:hover{ cursor: pointer }
   `
+
+interface PropsButton {
+   color: string
+   backgroundColor: string
+   borderColor: string
+   width?: string
+}
+
+export const Button = styled.button<PropsButton>`
+   color: ${(props) => props.color};
+   text-align: center;
+
+   display: block;
+
+   background: ${(props) => props.backgroundColor};
+   border: 1px solid ${(props) => props.borderColor};
+   border-radius: 4px;
+   box-shadow: none;
+   padding: 12px 0px;
+   width: ${(props) => props.width ?? '184px'};
+   line-height: 19px;
+
+   &:hover {
+      cursor: pointer;
+   }
+`
