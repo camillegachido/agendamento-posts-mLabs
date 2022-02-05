@@ -16,6 +16,26 @@ export const GlobalStyle = createGlobalStyle`
      display: flex;
      justify-content: space-between;
   }
+
+  input[type="time" i]{
+     font-family: 'Poppins', sans-serif;
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+   display: none;
+  }
+
+  .input-class{
+      border: 1px solid #949494;
+      line-height: 21px;
+      color: #828282;
+      padding: 12px 8px 12px 34px;
+      background-position: left 15px top 15px;
+      background-repeat: no-repeat;
+      background-color:  #fff;
+      width: 80px;
+      border-radius: 4px;
+  }
   `
 
 interface PropsButton {

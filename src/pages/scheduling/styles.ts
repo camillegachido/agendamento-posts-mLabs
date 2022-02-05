@@ -15,6 +15,7 @@ export const Container = styled.section`
 
    grid-template-rows: 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 2fr;
+   grid-column-gap: 40px;
 `
 
 interface PropsModal {
@@ -26,7 +27,6 @@ export const Modal = styled.article<PropsModal>`
    border: 1px solid #e0e0e0;
    border-radius: 4px;
    grid-area: ${(props) => props.gridArea};
-   grid-column-gap: 40px;
 
    header {
       border-bottom: 1px solid #e0e0e0;
