@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { postContext } from '../../context/post'
 
 import * as G from '../../common/styles'
-import { Instagram } from './components/instagram'
+import { Instagram, Linkedin } from './components'
 import * as S from './styles'
+import { EMedias } from '../../common/interfaces'
 
 export function Visualization(): JSX.Element {
    const { post } = useContext(postContext)
@@ -15,7 +16,14 @@ export function Visualization(): JSX.Element {
          </header>
          <main>
             {post.socialMedias.length > 0 ? (
-               <Instagram />
+               <>
+                  <Instagram
+                     show={post.socialMedias.includes(EMedias.instagram)}
+                  />
+                  <Linkedin
+                     show={post.socialMedias.includes(EMedias.linkedin)}
+                  />
+               </>
             ) : (
                <S.PostPreview>
                   <p>

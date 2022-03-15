@@ -13,3 +13,7 @@ export interface IPost {
    date: string
    img: string
 }
+
+export interface IShow {
+   show: boolean
+}

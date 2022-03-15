@@ -7,12 +7,13 @@ import Bookmark from '../../assets/bookmark.png'
 import Heart from '../../assets/heart.png'
 import Comment from '../../assets/comment.png'
 import { postContext } from '../../../../context/post'
+import { IShow } from '../../../../common/interfaces'
 
-export function Instagram(): JSX.Element {
+export function Instagram({ show }: IShow): JSX.Element {
    const { post } = useContext(postContext)
 
    return (
-      <Container>
+      <Container hidden={!show}>
          <header>
             <Icon background="linear-gradient(187.5deg, #EF2EA2 5.81%, #E0A22B 109.34%)">
                <svg

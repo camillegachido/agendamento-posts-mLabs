@@ -14,6 +14,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: flex-start;
       padding: 12px;
+      border-bottom: 0px;
 
       .info {
          margin: 8px;
@@ -29,6 +30,10 @@ export const Container = styled.div`
          object-fit: cover;
          object-position: center;
       }
+   }
+
+   .mt-0 {
+      margin-top: 0px;
    }
 `
 
