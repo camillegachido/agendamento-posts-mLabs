@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { UserName, Container, Icon, Description } from '../styles'
 import { ContainerIcons } from './styles'
@@ -6,8 +6,11 @@ import { ContainerIcons } from './styles'
 import Bookmark from '../../assets/bookmark.png'
 import Heart from '../../assets/heart.png'
 import Comment from '../../assets/comment.png'
+import { postContext } from '../../../../context/post'
 
 export function Instagram(): JSX.Element {
+   const { post } = useContext(postContext)
+
    return (
       <Container>
          <header>
@@ -27,11 +30,7 @@ export function Instagram(): JSX.Element {
             </div>
          </header>
          <main>
-            <img
-               src="https://www.bonde.com.br/img/bondenews/2019/12/img_1_75_1491.jpg"
-               alt="imagem"
-               className="principal"
-            />
+            <img src={post.img} alt="imagem" className="principal" />
             <ContainerIcons className="center">
                <div>
                   <img src={Heart} alt="ícone de favoritar" />
@@ -39,7 +38,7 @@ export function Instagram(): JSX.Element {
                </div>
                <img src={Bookmark} alt="ícone de bookmark" />
             </ContainerIcons>
-            <Description className="center">Texto do post</Description>
+            <Description className="center">{post.text}</Description>
          </main>
       </Container>
    )
