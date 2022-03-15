@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { postContext } from '../../../../context/post'
+import { postContext } from '../../context/post'
 
-import * as G from '../../styles'
+import * as G from '../../common/styles'
 import { Instagram } from './components/instagram'
 import * as S from './styles'
 

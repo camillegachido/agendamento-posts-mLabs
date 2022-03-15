@@ -69,3 +69,32 @@ export const Content = styled.div`
    padding: 16px 40px;
    margin: auto;
 `
+
+interface PropsModal {
+   gridArea: string
+}
+
+export const Modal = styled.article<PropsModal>`
+   background-color: #fff;
+   border: 1px solid #e0e0e0;
+   border-radius: 4px;
+   grid-area: ${(props) => props.gridArea};
+
+   header {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 8px 12px;
+   }
+
+   header h1 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0px;
+
+      color: #333333;
+   }
+
+   main {
+      padding: 8px 12px;
+   }
+`

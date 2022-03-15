@@ -1,49 +1,11 @@
-import React, { RefObject, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import DatePicker, { DayValue } from 'react-modern-calendar-datepicker'
 
 import Calendar from './assets/calendar-alt.png'
-import Clock from './assets/clock.svg'
 
-import * as G from '../../styles'
+import * as G from '../../../../common/styles'
 import 'react-modern-calendar-datepicker/lib/DatePicker.css'
-
-function InitialDate() {
-   const [selectedDay, setSelectedDay] = useState<DayValue>(null)
-   const renderCustomInput = ({ ref }: any) => (
-      <input
-         readOnly
-         ref={ref}
-         placeholder="DD/MM"
-         value={selectedDay ? `${selectedDay.day}/${selectedDay.month}` : ''}
-         style={{ backgroundImage: `url(${Calendar})` }}
-         className="input-class" // a styling class
-      />
-   )
-
-   return (
-      <DatePicker
-         value={selectedDay}
-         onChange={(vl) => setSelectedDay(vl)}
-         renderInput={renderCustomInput}
-         shouldHighlightWeekends
-      />
-   )
-}
-
-function InitialHour() {
-   const [selectedHour, setSelectedHour] = useState('')
-
-   return (
-      <input
-         type="time"
-         placeholder="HH:MM"
-         value={selectedHour}
-         style={{ backgroundImage: `url(${Clock})` }}
-         className="input-class"
-         onChange={({ target }) => setSelectedHour(target.value)}
-      />
-   )
-}
+import { InitialHour, InitialDate } from './components'
 
 export function Date(): JSX.Element {
    return (

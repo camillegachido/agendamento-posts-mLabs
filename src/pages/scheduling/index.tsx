@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { PostProvider } from '../../context/post'
 
-import { Footer, Medias, Date, Text, Upload, Visualization } from './components'
-
-import { EMedias } from '../../common/interfaces'
+import { Footer, Medias, Date, Text, Upload } from './components'
+import { Visualization } from '../../components/visualization'
 
 import * as S from './styles'
 import * as G from '../../common/styles'

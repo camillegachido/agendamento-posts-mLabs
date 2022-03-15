@@ -14,7 +14,13 @@ interface IPostContextType {
 
 const postContext = createContext<IPostContextType>({} as IPostContextType)
 function PostProvider({ children }: { children: ReactNode }) {
-   const [post, setPost] = useState<IPost>({ socialMedias: [], text: '' })
+   const [post, setPost] = useState<IPost>({
+      socialMedias: [],
+      text: '',
+      date: '',
+      hour: '',
+      img: '',
+   })
 
    const updatePost = useCallback((newPost: IPost) => {
       setPost(newPost)

@@ -4,7 +4,7 @@ import Picker, { IEmojiData } from 'emoji-picker-react'
 
 import { postContext } from '../../../../context/post'
 
-import * as G from '../../styles'
+import * as G from '../../../../common/styles'
 import * as S from './styles'
 
 export function Text(): JSX.Element {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { EMedias, IPost } from '../../../../common/interfaces'
+import { EMedias } from '../../../../common/interfaces'
 import { postContext } from '../../../../context/post'
 
-import * as G from '../../styles'
+import * as G from '../../../../common/styles'
 import * as S from './styles'
 
 export function Medias(): JSX.Element {

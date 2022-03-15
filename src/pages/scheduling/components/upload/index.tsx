@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from 'react'
 
 import { Drop } from './components'
-import * as G from '../../styles'
+import * as G from '../../../../common/styles'
 
 export function Upload(): JSX.Element {
    const [file, setFile] = useState<File>()
