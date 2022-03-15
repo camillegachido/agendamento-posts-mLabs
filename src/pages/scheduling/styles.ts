@@ -2,10 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
    width: 100%;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+   margin: 90px auto;
 
    .content {
       display: grid;
@@ -17,6 +14,7 @@ export const Container = styled.section`
       grid-template-columns: 1fr 1fr 2fr;
       grid-column-gap: 40px;
       grid-row-gap: 20px;
+      padding: 0px;
    }
 `
 

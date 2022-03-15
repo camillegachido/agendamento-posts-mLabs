@@ -10,6 +10,7 @@ export const Footer = styled.footer`
    .content {
       display: flex;
       justify-content: flex-end;
+      padding: 8px 40px;
    }
 
    .content div {
