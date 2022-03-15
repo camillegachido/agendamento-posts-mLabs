@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { EMedias, IPost } from '../../../../common/interfaces'
+import { postContext } from '../../../../context/post'
 
 import * as G from '../../styles'
 import * as S from './styles'
 
 export function Medias(): JSX.Element {
+   const { post, updatePost } = useContext(postContext)
+
    const [medias, setMedias] = useState<EMedias[]>([])
-   const [post, setPost] = useState<IPost>({ socialMedias: [] })
 
    const handleMedia = (media: EMedias) => () => {
       const mediaInd = medias.findIndex((s) => s === media)
@@ -20,8 +22,8 @@ export function Medias(): JSX.Element {
    }
 
    useEffect(() => {
-      setPost({ ...post, socialMedias: medias })
-   }, [medias, post])
+      updatePost({ ...post, socialMedias: medias })
+   }, [medias])
 
    return (
       <G.Modal gridArea="social">

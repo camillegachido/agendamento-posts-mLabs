@@ -6,6 +6,7 @@ export const Header = styled.header`
    top: 0;
    right: 0;
    background-color: #ffffff;
+   z-index: 5;
 
    div {
       display: flex;

@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { IPost } from '../../../../common/interfaces'
+import React, { useContext } from 'react'
+import { postContext } from '../../../../context/post'
 
 import * as G from '../../styles'
+import { Instagram } from './components/instagram'
 import * as S from './styles'
 
 export function Visualization(): JSX.Element {
-   const post: IPost = { socialMedias: [] }
+   const { post } = useContext(postContext)
 
    return (
       <G.Modal gridArea="visu">
@@ -14,7 +15,7 @@ export function Visualization(): JSX.Element {
          </header>
          <main>
             {post.socialMedias.length > 0 ? (
-               <p>aaaa</p>
+               <Instagram />
             ) : (
                <S.PostPreview>
                   <p>

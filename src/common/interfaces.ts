@@ -8,4 +8,5 @@ export enum EMedias {
 
 export interface IPost {
    socialMedias: EMedias[]
+   text: string
 }

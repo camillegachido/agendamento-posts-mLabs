@@ -15,11 +15,12 @@ export const Container = styled.section`
       grid-column-gap: 40px;
       grid-row-gap: 20px;
       padding: 0px;
+      height: 655px;
    }
 `
 
 interface PropsModal {
-   gridArea: string
+   gridArea?: string
 }
 
 export const Modal = styled.article<PropsModal>`

@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import * as S from './styles'
 import * as G from '../../../../common/styles'
+import { postContext } from '../../../../context/post'
 
 export function Footer(): JSX.Element {
+   const { post } = useContext(postContext)
+
+   const save = () => {
+      console.log(post)
+   }
+
    return (
       <S.Footer>
          <G.Content className="content">
@@ -16,6 +23,7 @@ export function Footer(): JSX.Element {
                   Cancelar
                </G.Button>
                <G.Button
+                  onClick={save}
                   borderColor="#2F80ED"
                   backgroundColor="#fff"
                   color="#2F80ED"

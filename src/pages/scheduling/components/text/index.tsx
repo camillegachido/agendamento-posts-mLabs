@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 
 import Picker, { IEmojiData } from 'emoji-picker-react'
+
+import { postContext } from '../../../../context/post'
 
 import * as G from '../../styles'
 import * as S from './styles'
 
 export function Text(): JSX.Element {
+   const { post, updatePost } = useContext(postContext)
+
    const [chosenEmoji, setChosenEmoji] = useState<IEmojiData>()
-   const [text, setText] = useState('')
    const [showEmoji, setShowEmoji] = useState(false)
 
    const onEmojiClick = (
@@ -18,7 +21,8 @@ export function Text(): JSX.Element {
    }
 
    useEffect(() => {
-      if (chosenEmoji) setText(text + chosenEmoji.emoji)
+      if (chosenEmoji)
+         updatePost({ ...post, text: post.text + chosenEmoji.emoji })
    }, [chosenEmoji])
 
    return (
@@ -29,8 +33,10 @@ export function Text(): JSX.Element {
          <S.TextareaContainer>
             <S.Textarea
                placeholder="Aqui vai o texto descritivo desse post"
-               value={text}
-               onChange={({ target }) => setText(target.value)}
+               value={post.text}
+               onChange={({ target }) =>
+                  updatePost({ ...post, text: target.value })
+               }
             />
             <S.EmojiButton
                type="button"
