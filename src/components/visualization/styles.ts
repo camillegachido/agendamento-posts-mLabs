@@ -20,3 +20,17 @@ export const PostPreview = styled.div`
       color: #828282;
    }
 `
+
+export const HasPostPreview = styled.div`
+   overflow: hidden;
+
+   .row {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .item-scroll {
+      //display: inline-block;
+      margin-right: 8px;
+   }
+`

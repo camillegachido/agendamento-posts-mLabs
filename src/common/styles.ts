@@ -36,6 +36,12 @@ export const GlobalStyle = createGlobalStyle`
       width: 80px;
       border-radius: 4px;
   }
+
+  .scroll-container{
+   position: relative;
+   overflow: hidden; 
+
+  }
   `
 
 interface PropsButton {
@@ -79,6 +85,7 @@ export const Modal = styled.article<PropsModal>`
    border: 1px solid #e0e0e0;
    border-radius: 4px;
    grid-area: ${(props) => props.gridArea};
+   max-width: 100%;
 
    header {
       border-bottom: 1px solid #e0e0e0;

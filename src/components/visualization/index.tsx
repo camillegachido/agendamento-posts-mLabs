@@ -1,4 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
+import ScrollContainer from 'react-indiana-drag-scroll'
+
 import { postContext } from '../../context/post'
 
 import * as G from '../../common/styles'
@@ -16,14 +18,18 @@ export function Visualization(): JSX.Element {
          </header>
          <main>
             {post.socialMedias.length > 0 ? (
-               <>
-                  <Instagram
-                     show={post.socialMedias.includes(EMedias.instagram)}
-                  />
-                  <Linkedin
-                     show={post.socialMedias.includes(EMedias.linkedin)}
-                  />
-               </>
+               <S.HasPostPreview>
+                  <ScrollContainer className="row">
+                     <div className="row">
+                        <Instagram
+                           show={post.socialMedias.includes(EMedias.instagram)}
+                        />
+                        <Linkedin
+                           show={post.socialMedias.includes(EMedias.linkedin)}
+                        />
+                     </div>
+                  </ScrollContainer>
+               </S.HasPostPreview>
             ) : (
                <S.PostPreview>
                   <p>

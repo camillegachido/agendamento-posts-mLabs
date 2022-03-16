@@ -18,7 +18,7 @@ export function Linkedin({ show }: IShow): JSX.Element {
    const { post } = useContext(postContext)
 
    return (
-      <Container hidden={!show}>
+      <Container hidden={!show} className="item-scroll">
          <header>
             <Icon background="#2E92EF">
                <svg
@@ -33,11 +33,13 @@ export function Linkedin({ show }: IShow): JSX.Element {
             </Icon>
             <ContainerInfo className="info">
                <UserName>Anselmo</UserName>
-               <Date>{post.date}</Date>
+               <Date>{post.date !== '' ? post.date : '6 de Janeiro'}</Date>
             </ContainerInfo>
          </header>
          <main>
-            <Description className="center mt-0">{post.text}</Description>
+            <Description className="center mt-0">
+               {post.text !== '' ? post.text : 'Exemplo de texto'}
+            </Description>
             <img src={post.img} alt="imagem" className="principal" />
             <CommentsContainer className="center">
                <p>5 comentários</p>

@@ -13,7 +13,7 @@ export function Instagram({ show }: IShow): JSX.Element {
    const { post } = useContext(postContext)
 
    return (
-      <Container hidden={!show}>
+      <Container hidden={!show} className="item-scroll">
          <header>
             <Icon background="linear-gradient(187.5deg, #EF2EA2 5.81%, #E0A22B 109.34%)">
                <svg
@@ -39,7 +39,9 @@ export function Instagram({ show }: IShow): JSX.Element {
                </div>
                <img src={Bookmark} alt="ícone de bookmark" />
             </ContainerIcons>
-            <Description className="center">{post.text}</Description>
+            <Description className="center">
+               {post.text !== '' ? post.text : 'Exemplo de texto'}
+            </Description>
          </main>
       </Container>
    )
